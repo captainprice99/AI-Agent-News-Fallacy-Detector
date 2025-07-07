@@ -1,17 +1,24 @@
-import os
 import pandas as pd
+from dotenv import load_dotenv
+import os
 from langchain_openai import ChatOpenAI
 
-openai_api_key = os.environ["OPENAI_API_KEY"]
-serper_api_key = os.environ["SERPER_API_KEY"]
+# Load .env file
+load_dotenv()
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
+serper_api_key = os.getenv("SERPER_API_KEY")
+
+if not openai_api_key or not serper_api_key:
+    raise ValueError("Missing API keys in .env")
 
 # Load fallacies
-fallacies_df = pd.read_csv('data/fallacies.csv')
+fallacies_df = pd.read_csv("data/fallacies.csv")
 
-# Model setup
+# LLM setup
 llm = ChatOpenAI(
     temperature=0,
-    model='gpt-4.1-mini',
+    model="gpt-4.1-mini",
     max_tokens=16000,
     openai_api_key=openai_api_key
 )
