@@ -5,7 +5,7 @@ from chains.chain1_summary import chain1
 from chains.chain2_review import chain2
 
 def main():
-    topic = "global trade"
+    topic = "european policy"
     search_results = search.results(f"site:whitehouse.gov {topic}")
     article_url = search_results['news'][0]['link']
     article_title = search_results['news'][0]['title']
