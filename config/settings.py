@@ -13,7 +13,6 @@ if not openai_api_key or not serper_api_key:
 
 fallacies_df = pd.read_csv("data/fallacies.csv")
 
-# LLM setup
 llm = ChatOpenAI(
     temperature=0,
     model="gpt-4.1-mini",
