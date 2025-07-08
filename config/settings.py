@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 import os
 from langchain_openai import ChatOpenAI
 
-# Load .env file
 load_dotenv()
 
 openai_api_key = os.getenv("OPENAI_API_KEY")
@@ -12,7 +11,6 @@ serper_api_key = os.getenv("SERPER_API_KEY")
 if not openai_api_key or not serper_api_key:
     raise ValueError("Missing API keys in .env")
 
-# Load fallacies
 fallacies_df = pd.read_csv("data/fallacies.csv")
 
 # LLM setup
