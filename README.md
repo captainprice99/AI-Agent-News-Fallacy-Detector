@@ -1,6 +1,6 @@
-# BotCatcher: AI-Powered News Fallacy Detector
+# AI-Powered News Fallacy Detector
 
-BotCatcher is an intelligent AI agent that identifies logical fallacies in news articles using LangChain and Retrieval Augmented Generation (RAG). It helps users critically evaluate news content by detecting potential biases, misleading arguments, and logical inconsistencies.
+This is a platform that identifies logical fallacies in news articles using LangChain and Retrieval Augmented Generation (RAG). It helps users critically evaluate news content by detecting potential biases, misleading arguments, and logical inconsistencies.
 
 ## Features
 
